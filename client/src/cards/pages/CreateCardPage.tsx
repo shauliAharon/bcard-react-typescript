@@ -23,7 +23,13 @@ const CreateCardPage = () => {
   if (!user || !user.isBusiness) return <Navigate replace to={ROUTES.ROOT} />;
 
   return (
-    <Container>
+    <Container
+    sx={{
+      paddingTop: 8,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}>
       <CardForm
         title="create business card"
         data={data}

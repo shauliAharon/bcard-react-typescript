@@ -20,8 +20,14 @@ const LoginPage = () => {
     loginSchema,
     handleLogin
   );
+// console.log(initialLoginForm);
+// console.log(loginSchema);
+// console.log(handleLogin);
+
+
 
   if (user) return <Navigate replace to={ROUTES.CARDS} />;
+console.log(rest.onSubmit);
 
   return (
     <Container
@@ -45,7 +51,8 @@ const LoginPage = () => {
           error={value.errors.email}
           onInputChange={rest.handleInputChange}
           data={value.data}
-        />
+          />
+        
         <Input
           label="password"
           name="password"

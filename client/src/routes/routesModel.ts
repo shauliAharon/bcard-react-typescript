@@ -12,6 +12,8 @@ const ROUTES = {
   USER_PROFILE: "/user-info",
   EDIT_USER: "edit-user",
   SANDBOX: "/sandbox",
+  LANDING:'/LandingPage',
+  LAYOUT: 'Layout'
 };
 
 export default ROUTES;

@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import LoopIcon from "@mui/icons-material/Loop";
 import Joi from "joi";
 
+
 type Props = {
   title?: string;
   onSubmit: () => void;
@@ -38,6 +39,7 @@ const Form: FC<Props> = ({
   children,
 }) => {
   const navigate = useNavigate();
+
 
   return (
     <Box
@@ -77,8 +79,9 @@ const Form: FC<Props> = ({
           <FormButton
             node="Submit"
             onClick={onSubmit}
-            disabled={!!onFormChange()}
+            disabled={!!onFormChange() }
             size="large"
+            
           />
         </Grid>
       </Grid>

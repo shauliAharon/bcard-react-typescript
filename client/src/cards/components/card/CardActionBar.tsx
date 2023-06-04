@@ -18,10 +18,7 @@ type CardActionBarProps = {
   cardUserId: string;
   onDelete: (id: string) => void;
   onLike: () => void;
-  cardLikes: CardInterface[] | any
-
-
-
+  cardLikes: CardInterface[] |any|string[]
 };
 
 const CardActionBar = ({
@@ -81,20 +78,20 @@ const {handleLikeCard}=useCards()
             </IconButton>
           )}
         </Box>
-
+{user && (
         <Box>
           <IconButton aria-label="call business">
             <CallIcon />
           </IconButton>
 
-          {user && (
+          
             <IconButton
               aria-label="add to fav"
               onClick={handleLike}>
               <FavoriteIcon color={ isLike ? "error" : "inherit"} />
             </IconButton>
-          )}
-        </Box>
+         
+        </Box> )}
       </CardActions>
       <CardDeleteDialog
         isDialogOpen={isDialogOpen}

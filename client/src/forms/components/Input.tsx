@@ -28,7 +28,7 @@ const Input: FC<Props> = ({
   required = true,
   error,
   onInputChange,
-  breakPoints,
+  breakPoints,  
 }) => {
   return (
     <Grid item xs={12} {...breakPoints}>
@@ -38,7 +38,7 @@ const Input: FC<Props> = ({
         type={type}
         id={name}
         name={name}
-        value={data[name] ? data[name] : ""}
+       value={data[name] ? data[name] : ""}
         required={required}
         error={Boolean(error)}
         helperText={error}

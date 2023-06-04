@@ -5,20 +5,21 @@ import Router from "./routes/Router";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import { SnackbarProvider } from "./providers/SnackbarProvider";
 import { UserProvider } from "./users/providers/UserProvider";
+// import LandingPage from "./layout/LandingPage";
 
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter>       
         <ThemeProvider>
           <SnackbarProvider>
             <UserProvider>
-              <Layout>
+                <Layout>    
                 <Router />
               </Layout>
             </UserProvider>
           </SnackbarProvider>
-        </ThemeProvider>
+        </ThemeProvider>           
       </BrowserRouter>
     </div>
   );

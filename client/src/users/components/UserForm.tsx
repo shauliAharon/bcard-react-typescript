@@ -16,7 +16,7 @@ type Props = {
   title?: string;
   onSubmit: () => void;
   onReset: () => void;
-  onFormChange: () => Joi.ValidationError | null;
+  onFormChange: () => Joi.ValidationError |null;
   errors: RegistrationFormErrors;
   data: RegistrationForm;
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -33,14 +33,14 @@ const UserForm: FC<Props> = ({
   setData,
 }) => {
   return (
-    <Form
+    <Form 
       onSubmit={onSubmit}
       onReset={onReset}
       onFormChange={onFormChange}
       styles={{ maxWidth: "800px" }}
       title={title}
       to={ROUTES.CARDS}>
-      <Input
+      <Input 
         name="first"
         label="first name"
         error={errors.first}

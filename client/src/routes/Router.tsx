@@ -29,10 +29,15 @@ import MyCardsPage from "../cards/pages/MyCardsPage";
 import CreateCardPage from "../cards/pages/CreateCardPage";
 import EditCardPage from "../cards/pages/EditCardPage";
 import FavCardsPage from "../cards/pages/FavCardsPage";
+import EditUserPage from "../users/pages/EditUserPage";
+// import LandingPage from "../layout/LandingPage";
+// import LandingPage from "../layout/LandingPage";
+
 
 const Router = () => {
   return (
     <Routes>
+     {/* <Route  path="/" element={<LandingPage/>} /> */}
       <Route path={ROUTES.ROOT} element={<CardsPage />} />
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={ROUTES.MY_CARDS} element={<MyCardsPage />} />
@@ -40,6 +45,8 @@ const Router = () => {
         path={`${ROUTES.CARD_DETAILS}/:cardId`}
         element={<CardDetailsPage />}
       />
+        <Route path={`${ROUTES.EDIT_USER}/:userId`} element={<EditUserPage />} />
+      {/* <Route path={ROUTES.EDIT_USER} element={<EditUserPage />} /> */}
       <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />} />
       <Route path={`${ROUTES.EDIT_CARD}/:cardId`} element={<EditCardPage />} />
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />

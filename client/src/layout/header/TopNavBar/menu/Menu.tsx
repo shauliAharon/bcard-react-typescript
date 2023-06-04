@@ -6,6 +6,7 @@ import { useUser } from "../../../../users/providers/UserProvider";
 import ROUTES from "../../../../routes/routesModel";
 import useHandleUsers from "../../../../users/hooks/useHandleUsers";
 
+
 type Props = {
   isOpen: boolean;
   anchorEl: HTMLElement;
@@ -20,6 +21,7 @@ const Menu: React.FC<Props> = ({ isOpen, anchorEl, onClose }) => {
     handleLogout();
     onClose();
   };
+// console.log(user);
 
   return (
     <MuiMenu
@@ -61,8 +63,8 @@ const Menu: React.FC<Props> = ({ isOpen, anchorEl, onClose }) => {
         )}
         {user && (
           <>
-            <MenuLink label="profile" navigateTo={"/"} onClick={onClose} />
-            <MenuLink label="edit account" navigateTo={"/"} onClick={onClose} />
+            <MenuLink label="profile" navigateTo={ROUTES.FAV_CARDS} onClick={onClose} />
+            <MenuLink label="edit account" navigateTo={`${ROUTES.EDIT_USER}/${user._id}`} onClick={onClose} />
 
             <MenuItem onClick={onLogout}>Logout</MenuItem>
           </>

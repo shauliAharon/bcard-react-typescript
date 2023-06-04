@@ -2,6 +2,9 @@ import React from "react";
 import Header from "./header/Header";
 import Main from "./main/Main";
 import Footer from "./footer/Footer";
+// import LandingPage from "./LandingPage";
+
+
 
 type LayoutProp = {
   children: JSX.Element[] | JSX.Element;
@@ -13,6 +16,7 @@ const Layout: React.FC<LayoutProp> = ({ children }) => {
       <Header />
       <Main>{children}</Main>
       <Footer />
+
     </>
   );
 };

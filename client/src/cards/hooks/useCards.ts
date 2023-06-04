@@ -29,7 +29,7 @@ type ErrorType = null | string;
 
 const useCards = () => {
   const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState<null | string>(null);
+  const [error, setError] = useState<ErrorType>(null);
   const [cards, setCards] = useState<CardsType>(null);
   const [card, setCard] = useState<CardType>(null);
   const [query, setQuery] = useState<CardType |any>("");
@@ -40,7 +40,8 @@ const useCards = () => {
  },[searchParams])
 useEffect(()=>{
   if (cards){
-    setFilter(cards.filter(card=> card.title.includes(query)|| String(card.bizNumber).includes(query)))
+    setFilter(cards.filter(card=> card.title.includes(query)||  String(card.bizNumber).includes(query)||card.subtitle.includes(query)||card.description.includes(query)))
+
   }
 },[cards,query ])
 
@@ -53,7 +54,7 @@ const {user}=useUser()
     loading: boolean,
     errorMessage: ErrorType,
     cards: CardsType,
-    card: CardType = null
+    card: CardType= null
   ) => {
     setLoading(loading);
     setError(errorMessage);

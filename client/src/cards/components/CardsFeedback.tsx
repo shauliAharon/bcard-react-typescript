@@ -9,7 +9,7 @@ import Error from "../../components/Error";
 type CardsFeedbackProps = {
   isLoading: boolean;
   error: string | null;
-  cards: CardInterface[] | null;
+  cards: CardInterface[] | null ;
   onDelete?: (id: string) => void;
   onLike: () => void |null |any;
 };

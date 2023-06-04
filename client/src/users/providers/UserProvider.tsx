@@ -10,12 +10,14 @@ import React, {
 import { getToken, getUser } from "../service/localStorage";
 import { TokenType } from "../models/types/userType";
 
+
 type ContextArgs = {
-  user: null | TokenType;
+  user: null | TokenType ;
   setUser: (value: SetStateAction<null | TokenType>) => void;
   token: string | null;
   setToken: (value: SetStateAction<string | null>) => void;
 };
+
 
 const UserContext = React.createContext<null | ContextArgs>(null);
 

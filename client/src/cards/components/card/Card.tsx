@@ -7,7 +7,7 @@ import CardActionBar from "./CardActionBar";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../../routes/routesModel";
 import CardInterface from "../../models/interfaces/CardInterface";
-import C from "../../../sandbox/context/components/C";
+
 
 type CardProps = {
   card: CardInterface;

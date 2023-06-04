@@ -12,10 +12,10 @@ import useCards from "../../../../cards/hooks/useCards";
 
 const SearchBar = () => {
   const {isDark}= useTheme();
-const [searchParams, setSearch]=useSearchParams();
+const [searchParams, setSearch]=useSearchParams("");
 
 
-const handleChange = ({target}:CardInterface[]|any|null )=> setSearch({q:target.value});
+const handleChange = ({target}:CardInterface[]|any )=> setSearch({q:target.value});
 
 
   return (
@@ -24,7 +24,7 @@ const handleChange = ({target}:CardInterface[]|any|null )=> setSearch({q:target.
         <OutlinedInput
           sx={{ backgroundColor:isDark? "#333333" :"#e3f2fd" }}
           placeholder="Search"
-          value={searchParams.get("q"?? "")}
+          value={searchParams.get("q")?? ""}
           onChange={handleChange}
           size="small"
           endAdornment={

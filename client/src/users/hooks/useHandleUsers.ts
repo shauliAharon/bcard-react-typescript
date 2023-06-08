@@ -7,9 +7,14 @@ import {
   setTokenInLocalStorage,
 } from "../service/localStorage";
 import { useUser } from "../providers/UserProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ROUTES from "./../../routes/routesModel";
-import { Login, RegistrationForm, TokenType, userMapToModelType } from "../models/types/userType";
+import {
+  Login,
+  RegistrationForm,
+  TokenType,
+  userMapToModelType,
+} from "../models/types/userType";
 import normalizeUser from "../helpers/normalization/normalizeUser";
 import normalizeEditCard from "../../cards/helpers/normalizations/normalizeEditCard";
 import UserInterface from "../models/interfaces/UserInterface";
@@ -17,6 +22,7 @@ import { useSnack } from "../../providers/SnackbarProvider";
 // type ErrorType = null | string;
 type UserType = null | UserInterface;
 const useHandleUsers = () => {
+  const { userId } = useParams();
   const [error, setError] = useState<null | string>(null);
   const [isLoading, setLoading] = useState(false);
   const snack = useSnack();
@@ -29,13 +35,12 @@ const useHandleUsers = () => {
       loading: boolean,
       errorMessage: string | null,
       user: null | TokenType = null,
-      userData?: UserType 
+      userData?: UserType
     ) => {
       setLoading(loading);
       setError(errorMessage);
       setUser(user);
       if (userData) setUserData(userData);
-      
     },
     [setUser]
   );
@@ -79,18 +84,15 @@ const useHandleUsers = () => {
     [handleLogin, requestStatus]
   );
 
-
   const handelEditUser = useCallback(
     async (user: userMapToModelType) => {
       try {
-        setLoading(false);
+        setLoading(false); 
         const normalize_User = normalizeUser(user);
+        normalize_User._id = userId
         const UserUp = await EditUser(normalize_User);
-
         requestStatus(false, null, null, UserUp);
-
         snack("success", "The user has been successfully Created");
-
         navigate(ROUTES.ROOT);
       } catch (error) {
         if (typeof error === "string") requestStatus(false, error, null, null);
@@ -104,10 +106,9 @@ const useHandleUsers = () => {
         setLoading(false);
         const userFromClient = await GetUser(userId);
         if (userFromClient) {
-          requestStatus(false, null, null, userFromClient);
+          requestStatus(false, null, user, userFromClient);
           return userFromClient;
         }
-       
       } catch (error) {
         if (typeof error === "string") requestStatus(false, error, null, null);
       }
@@ -125,7 +126,7 @@ const useHandleUsers = () => {
     handleLogout,
     handleSignup,
     handelGetUser,
-    handelEditUser
+    handelEditUser,
   };
 };
 

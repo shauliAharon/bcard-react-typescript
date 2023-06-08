@@ -2,6 +2,7 @@ import { RegistrationForm } from "../../models/types/userType";
 
 const normalizeUser = (user: RegistrationForm) => {
   return {
+    _id: user._id,
     name: {
       first: user.first,
       middle: user.middle,

@@ -38,6 +38,7 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  debugger
   try {
     let user = req.body;
     const { error } = validateLogin(user);
@@ -88,6 +89,7 @@ router.get("/:id", auth, async (req, res) => {
 });
 
 router.put("/:id", auth, async (req, res) => {
+  debugger
   try {
     const userId = req.params.id;
     const user = req.user;

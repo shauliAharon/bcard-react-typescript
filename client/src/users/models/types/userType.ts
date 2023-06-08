@@ -40,6 +40,7 @@ export type RegistrationForm = {
   houseNumber: string;
   zip: string;
   isBusiness: boolean;
+  _id?: string;
 };
 
 export type RegistrationFormErrors = Partial<RegistrationForm>;
@@ -55,6 +56,7 @@ export type UserRegistered = {
   _id: string;
 };
 export type userMapToModelType = {
+  _id: string;
   first: string;
   middle: string;
   last: string;
@@ -75,6 +77,7 @@ export type userMapToModelType = {
   isAdmin: boolean;
 };
 export type NormalizedEditUser = {
+  _id?: string;
   name: { first: string; middle: string; last: string };
   phone: string;
   email: string;
@@ -92,12 +95,9 @@ export type NormalizedEditUser = {
     zip: number;
   };
   isBusiness: boolean;
-
-  user_id?: string;
 };
 export type CreateUserErrors = Partial<RegistrationForm>;
 
-
 export default UserType;
-//  
-// 
+//
+//

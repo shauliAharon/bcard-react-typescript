@@ -17,9 +17,7 @@ const SignupPage = () => {
     signupSchema,
     handleSignup
   );
-console.log(initialSignupForm);
-console.log(signupSchema);
-console.log(handleSignup);
+
 
   if (user) return <Navigate replace to={ROUTES.CARDS} />;
 

@@ -72,6 +72,9 @@ console.log(rest);
 // console.log(onSubmit);
 
   //  if (!user) return <Navigate replace to={ROUTES.ROOT} />; 
+
+ console.log(user);
+ 
   return (
 
     <Container

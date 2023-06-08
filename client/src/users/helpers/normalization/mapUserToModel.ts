@@ -25,6 +25,7 @@ const mapUserToModel = (user: UserInterface): RegistrationForm => {
     url: user.image.url,
     alt: user.image.alt,
     isBusiness: user.isBusiness,
+    // _id: user._id,
   };
 };
 

@@ -27,8 +27,6 @@ const EditUserPage = () => {
 
   const { handleInputChange, handleReset, onSubmit, validateForm, setData } = rest;
 
-console.log(rest);
-
   useEffect(() => {
     if (userId)
       handelGetUser(userId).then((userFromClient) => {
@@ -41,7 +39,6 @@ console.log(rest);
   }, []);
 
 
- console.log(user);
  
   return (
 

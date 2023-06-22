@@ -4,7 +4,6 @@ const initialEdit = {
     last: "",
     phone: "",
     email: "",
-    password: "",
     url: "",
     alt: "",
     state: "",
@@ -14,8 +13,7 @@ const initialEdit = {
     houseNumber: "",
     zip: "",
     isBusiness: false,
-    user_id: "",
-    isAdmin: false,
+
   };
   
   export default initialEdit;

@@ -48,7 +48,7 @@ const EditCardPage = () => {
         alignItems: "center",
       }}>
       <CardForm
-        title="edit card"
+        title="edit business"
         onSubmit={onSubmit}
         onReset={handleReset}
         errors={errors}

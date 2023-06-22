@@ -1,5 +1,3 @@
-
-
 import { userMapToModelType } from "../../models/types/userType";
 
 const normalizeEditUser = (user: userMapToModelType) => {

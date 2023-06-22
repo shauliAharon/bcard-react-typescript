@@ -13,7 +13,8 @@ const ROUTES = {
   EDIT_USER: "edit-user",
   SANDBOX: "/sandbox",
   LANDING:'/LandingPage',
-  LAYOUT: 'Layout'
+  LANDING1:'/Landing',
+  LAYOUT: '/Layout'
 };
 
 export default ROUTES;

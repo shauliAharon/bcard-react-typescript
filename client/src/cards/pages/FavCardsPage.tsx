@@ -29,8 +29,8 @@ const FavCardsPage = () => {
   return (
  <Container>
    <PageHeader 
-   title='Favoritr Cards Page'
-   subtitle="Here you can find all your favorite business cards"
+   title='Favoritr business '
+   subtitle="Here you can find all your favorite business "
 /> 
 <CardsFeedback
         isLoading={isLoading}

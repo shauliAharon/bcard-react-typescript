@@ -21,7 +21,7 @@ const Menu: React.FC<Props> = ({ isOpen, anchorEl, onClose }) => {
     handleLogout();
     onClose();
   };
-// console.log(user);
+
 
   return (
     <MuiMenu
@@ -63,7 +63,7 @@ const Menu: React.FC<Props> = ({ isOpen, anchorEl, onClose }) => {
         )}
         {user && (
           <>
-            <MenuLink label="profile" navigateTo={ROUTES.FAV_CARDS} onClick={onClose} />
+            <MenuLink label="home" navigateTo={ROUTES.CARDS} onClick={onClose} />
             <MenuLink label="edit account" navigateTo={`${ROUTES.EDIT_USER}/${user._id}`} onClick={onClose} />
 
             <MenuItem onClick={onLogout}>Logout</MenuItem>

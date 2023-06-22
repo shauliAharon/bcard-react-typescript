@@ -20,11 +20,6 @@ const LoginPage = () => {
     loginSchema,
     handleLogin
   );
-// console.log(initialLoginForm);
-// console.log(loginSchema);
-// console.log(handleLogin);
-
-
 
   if (user) return <Navigate replace to={ROUTES.CARDS} />;
 console.log(rest.onSubmit);

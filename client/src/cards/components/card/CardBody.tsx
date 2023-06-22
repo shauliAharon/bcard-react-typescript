@@ -21,6 +21,8 @@ const CardBody = ({ card }: CardBodyProps) => {
       <Divider />
       <Box mt={1}>
         <CardRow title="phone" content={card.phone} />
+        <CardRow title="biz number" content={String (card.bizNumber)} />
+        <CardRow title="email" content={card.email} />
         <CardRow title="address" content={`${street} ${houseNumber} ${city}`} />
         <CardRow title="card number" content={String(card.bizNumber)} />
       </Box>

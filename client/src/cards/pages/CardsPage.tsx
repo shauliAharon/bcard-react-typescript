@@ -22,7 +22,7 @@ const CardsPage: React.FC<CardsPageProps> = () => {
   return (
     <Container>
       <PageHeader
-        title="Cards Page"
+        title="Home Page"
         subtitle="On this page you can find all business cards form all categories"
       />
       <CardsFeedback

@@ -1,38 +1,54 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import ROUTES from '../routes/routesModel';
-import { Button } from '@mui/material';
-import FormLink from '../forms/components/FormLink';
+import {  useNavigate } from 'react-router-dom';
+import { Button, Container, Typography } from '@mui/material';
+import { styled } from '@mui/system';
 
-// import "../App.css";
+
  type LandingProp = {
-  children: JSX.Element[] | JSX.Element;
+  onClick: () => void
  };
-// 
-const LandingPage : React.FC<LandingProp> = ({ children }) => {
-  // const navigate = useNavigate();
-  // console.log(navigate);
+
+ const StyledContainer = styled(Container)`
+   background-color: #f5f5f5;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-top: 5rem;
+   padding-top: 5rem;
+ `;
+ 
+ const StyledButton = styled(Button)`
+   background-color: #00a9da;
+   color: #fff;
+   font-size: 1.2rem;
+   padding: 1.5rem 3rem;
+   margin-top: 3rem;
+   &:hover {
+     background-color: #00a5fa;
+   }
+ `;
+const LandingPage: React.FC<LandingProp> = ({ onClick })  => {
+  const navigate = useNavigate();
+  console.log(navigate);
 
   return (
-    <div className="App">
-    <header className="App-header">
-  
-      <h1>Welcome to My Landing Page</h1>
-      <p>Thank you for visiting!</p>
-     {/* <Button
-     onClick={() => navigate(`${ROUTES.ROOT}`)}>
-     get Started
-     </Button> */}
-      {/* <button className="App-button" 
-      onClick={() => navigate(`${ROUTES.ABOUT}`)}>Get Started</button> */}
-      {/* <FormLink text='get Started' to={ROUTES.FAV_CARDS}/> */}
-      <Link to="/cards">Go to About page</Link>
-    </header> 
-    </div>
+    <StyledContainer maxWidth="md">
+    <Typography variant="h2" sx={{ fontSize: '3.5rem', fontWeight: 'bold', mb: '2rem', color: '#333' }}>
+    Welcome to the BusinessIL 
+    </Typography>
+    <Typography variant="body1" sx={{ fontSize: '1.5rem', color: '#777', mb: '3rem' }}>
+    Here you can  choose the business you favourite, create and edit your business
+    </Typography>
+      <img src="/assets/images/card.jpg" alt="card" width="200px" />
+    <StyledButton onClick={onClick} variant="contained">Get Started</StyledButton>
+  </StyledContainer>       
   )
 }
-
 export default LandingPage
+
+
+
 
 
 

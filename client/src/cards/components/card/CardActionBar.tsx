@@ -101,5 +101,5 @@ const {handleLikeCard}=useCards()
     </>
   );
 };
-// () => console.log(`you liked card no: ${cardId}`)
+
 export default React.memo(CardActionBar);

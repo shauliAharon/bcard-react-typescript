@@ -8,16 +8,12 @@ import IconButton from "@mui/material/IconButton";
 import { useTheme } from "../../../../providers/ThemeProvider";
 import { useSearchParams } from "react-router-dom";
 import CardInterface from "../../../../cards/models/interfaces/CardInterface";
-import useCards from "../../../../cards/hooks/useCards";
+
 
 const SearchBar = () => {
-  const {isDark}= useTheme();
+const {isDark}= useTheme();
 const [searchParams, setSearch]=useSearchParams("");
-
-
 const handleChange = ({target}:CardInterface[]|any )=> setSearch({q:target.value});
-
-
   return (
     <Box display="inline-flex">
       <FormControl variant="standard">

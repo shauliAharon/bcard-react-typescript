@@ -30,8 +30,8 @@ const MyCardsPage = () => {
   return (
     <Container sx={{ position: "relative", minHeight: "92vh" }}>
       <PageHeader
-        title="My Cards Page"
-        subtitle="Here you can find your business cards"
+        title="My business"
+        subtitle="Here you can find your business "
       />
 
       {cards && (

@@ -7,29 +7,17 @@ const AboutPage = () => {
   return (
     <Container maxWidth="lg">
       <PageHeader
-        title="About Page"
-        subtitle="On this page you can find explanations about using the application"
+        title="About BusinessIL"
+        subtitle="On this page you will find explanations about using the  BusinessIL website"
       />
 
       <Grid container spacing={2}>
-        <Grid item xs={12} md={8} alignSelf="center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-          repellendus nostrum. Dolorem voluptatem dolor ipsam, ab voluptates
-          laboriosam qui voluptate cum consectetur exercitationem, tempore
-          facere quod iste nemo modi rerum natus libero cupiditate quidem esse
-          soluta assumenda veritatis porro fuga? Officiis voluptatem ex odio
-          itaque. Delectus, quod qui eligendi cupiditate, asperiores ratione
-          iusto aspernatur veniam accusamus molestiae ipsum, dignissimos
-          voluptatem perferendis quibusdam! Accusamus consequatur tenetur
-          provident odio magni, debitis placeat commodi cupiditate? Eum officia
-          fuga corrupti aut adipisci totam? Voluptatum fugiat, perspiciatis
-          eveniet ad repellat molestiae eligendi aliquam ratione nostrum est
-          quia ab et, mollitia blanditiis reiciendis minus deserunt eos. Vitae,
-          reiciendis sunt autem, error illum, deleniti ratione quos doloremque
-          accusantium in ipsa rem placeat! Assumenda quibusdam tenetur
-          repellendus quod commodi! Ducimus eaque ratione non sint nulla rem
-          impedit voluptas tenetur labore, enim adipisci voluptate accusamus.
-          Eius, velit nesciunt tempore reprehenderit hic sint, adipisci iure
+        <Grid sx={{fontSize:"1.7rem"}} item xs={12} md={8} alignSelf="center">
+       <p >Meet buisnessIL!<br /><br /><hr /> 
+        on our platform, you can search and find all of your favorite buisnesses such as restaraunts, bars, household items, latest fashion trend etc. <br />
+         also, those who register on our site can choose their favorite buisnesses. <br />
+for those who choose our buisness  route can  publish, and edit the buisnesses of choice. <br /> <br /> <hr />
+join us now!</p> 
         </Grid>
         <Grid
           item

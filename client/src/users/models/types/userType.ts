@@ -96,6 +96,7 @@ export type NormalizedEditUser = {
   };
   isBusiness: boolean;
 };
+
 export type CreateUserErrors = Partial<RegistrationForm>;
 
 export default UserType;

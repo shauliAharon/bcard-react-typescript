@@ -22,7 +22,7 @@ const LoginPage = () => {
   );
 
   if (user) return <Navigate replace to={ROUTES.CARDS} />;
-console.log(rest.onSubmit);
+// console.log(rest.onSubmit);
 
   return (
     <Container

@@ -51,7 +51,7 @@ export const GetUser = async (userId: string) => {
       `${apiUrl}/users/${userId}`
     );
     
-    console.log(data);
+
 
     if (data) return Promise.resolve(data);
   } catch (error) {

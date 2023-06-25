@@ -34,7 +34,8 @@ const EditUserPage = () => {
 
         if (user?._id !== userFromClient!._id) return navigate(ROUTES.ROOT);
         const modeledUser = mapUserToModel(userFromClient!);
-        setData(modeledUser);console.log(modeledUser);
+        setData(modeledUser);
+        // console.log(modeledUser);
       });
   }, []);
 

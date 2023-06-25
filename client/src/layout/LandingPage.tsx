@@ -1,4 +1,4 @@
-import {  useNavigate } from 'react-router-dom';
+
 import { Button, Container, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
@@ -29,9 +29,7 @@ import { styled } from '@mui/system';
    }
  `;
 const LandingPage: React.FC<LandingProp> = ({ onClick })  => {
-  const navigate = useNavigate();
-  console.log(navigate);
-
+ 
   return (
     <StyledContainer maxWidth="md">
     <Typography variant="h2" sx={{ fontSize: '3.5rem', fontWeight: 'bold', mb: '2rem', color: '#333' }}>
